@@ -16,8 +16,14 @@ module.exports = {
       filename: './data/test.db3'
     },
     useNullAsDefault: true,
-    
+    migrations: {
+      directory: './migrations'
+    },
+    seeds: {
+      directory: './seeds'
+    }
   },
+
   staging: {
     client: 'postgresql',
     connection: {
