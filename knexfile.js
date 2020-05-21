@@ -5,15 +5,15 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './api/descriptions.sqlite3'
+      filename: './data/descriptions.sqlite3'
     },
     useNullAsDefault: true,
   },
 
-  teting: {
+  testing: {
     client: 'sqlite3',
     connection: {
-      filename: './api/test.db3'
+      filename: './data/test.db3'
     },
     useNullAsDefault: true,
     
