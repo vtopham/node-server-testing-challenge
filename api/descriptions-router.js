@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 })
 
 //remove a description
-router.delete('/:id/delete', validateId, (req, res) => {
+router.delete('/:id', validateId, (req, res) => {
    Desc.remove(req.params.id)
     .then(num => {
         res.status(200).json({message: `${num} records successfully deleted`})

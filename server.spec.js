@@ -40,10 +40,14 @@ describe('POST /', () => {
         return request(server).post('/api/descriptions')
             .send({description: 'fun'})
             .expect(201)
-            
     });
 });
 
 //remove descriptions tests
-
+describe('DELETE /:id', () => {
+    it('has a status code of 200 and delete message', () => {
+        return request(server).delete('/api/descriptions/2')
+            .expect(200)
+    })
+})
 
