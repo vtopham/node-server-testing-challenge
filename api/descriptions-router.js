@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     if(req.body && req.body.description) {
         Desc.insert(req.body)
             .then(([id]) => {
-                res.status(201).json({data: `Description ${id} successfully created`})
+                res.status(201).json({data: `Description ${id} successfully created`, id: id})
             })
             .catch(err => {
                 res.status(500).json({message: "Error creating description", error: err})
